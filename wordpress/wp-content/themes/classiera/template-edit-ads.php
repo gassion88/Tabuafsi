@@ -483,6 +483,20 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 		wp_redirect( $permalink ); exit;
 	}/*If there is no error*/
 }
+if($_POST['classiera-sub-cat-field'] = '39'){
+                    update_post_meta($post_id, 'Модель', $_POST['39custom_field'][1][1]); 
+                    update_post_meta($post_id, 'Год выпуска', $_POST['39custom_field'][10][1]);
+                    update_post_meta($post_id, 'Пробег', $_POST['39custom_field'][5][1]);
+                    update_post_meta($post_id, 'Объём двигателя', $_POST['39custom_field'][9][1]);
+                    update_post_meta($post_id, 'Марка', $_POST['39custom_field'][0][1]);
+                    update_post_meta($post_id, 'Коробка передач', $_POST['39custom_field'][4][1]);
+                    update_post_meta($post_id, 'Тип кузова', $_POST['39custom_field'][7][1]);
+                    update_post_meta($post_id, 'Тип двигателя', $_POST['39custom_field'][8][1]);
+                    update_post_meta($post_id, 'Руль', $_POST['39custom_field'][11][1]);
+                    update_post_meta($post_id, 'Мощность, л.с.', $_POST['39custom_field'][10][1]);
+
+
+				}
 get_header();
 ?>
 <?php while ( have_posts() ) : the_post(); ?>
@@ -1573,3 +1587,15 @@ jQuery(document).ready(function () {
 });
 </script>
 <?php get_footer(); ?>
+
+
+
+
+
+
+
+
+$connection = mysqli_connect("localhost", "my_user", "my_password", "my_db");
+
+
+

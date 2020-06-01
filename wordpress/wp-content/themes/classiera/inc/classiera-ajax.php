@@ -293,7 +293,7 @@ if (!function_exists('classiera_Get_Custom_Fields')) {
 						foreach($optionsarray as $option){
 							$optionData[$i] .= '<option value="'.$option.'">'.$option.'</option>';
 						}
-						echo '<div class="form-group cat-'.$categoryID.'"><label class="col-sm-3 text-left flip">'.$thisCategoryFields[$i][0].': </label><div class="col-sm-6"><div class="inner-addon right-addon"><i class="form-icon right-form-icon fas fa-angle-down"></i><input type="hidden" class="custom_field" id="custom_field['.$i.'][0]" name="'.$categoryID.'custom_field['.$i.'][0]" value="'.$thisCategoryFields[$i][0].'" size="12"><input type="hidden" class="custom_field" id="custom_field['.$i.'][2]" name="'.$categoryID.'custom_field['.$i.'][2]" value="'.$thisCategoryType[$i][1].'" size="12"><select class="form-control form-control-md" id="custom_field['.$i.'][1]" name="'.$categoryID.'custom_field['.$i.'][1]"><option>'.$thisCategoryFields[$i][0].'</option>'.$optionData[$i].'</select></div></div></div>';
+						echo '<div class="form-group cat-'.$categoryID.'"><label class="col-sm-3 text-left flip">'.$thisCategoryFields[$i][0].': </label><div class="col-sm-6"><div class="inner-addon right-addon"><i class="form-icon right-form-icon fas fa-angle-down"></i><input type="hidden" class="custom_field" id="custom_field['.$i.'][0]" name="'.$categoryID.'custom_field['.$i.'][0]" value="'.$thisCategoryFields[$i][0].'" size="12"><input type="hidden" class="custom_field" id="custom_field['.$i.'][2]" name="'.$categoryID.'custom_field['.$i.'][2]" value="'.$thisCategoryType[$i][1].'" size="12"><select class="form-control form-control-md" id="custom_field['.$i.'][1]" name="'.$categoryID.'custom_field['.$i.'][1]"><option value="" >'.$thisCategoryFields[$i][0].'</option>'.$optionData[$i].'</select></div></div></div>';
 					}			
 				}
 				for($i = 0; $i < (count($thisCategoryFields)); $i++){
@@ -1025,16 +1025,6 @@ if (!function_exists('classiera_adv_search_customfields')) {
 								echo '</div></br>';			
 
 
-					echo '<div class="inner-addon right-addon">';
-									echo '<i class="right-addon form-icon fas fa-sort"></i>';
-									echo '<select name="auto_type" class="form-control form-control-sm">';
-									echo '<option value="">Тип автомобиля</option>';							
-									echo '<option value="">Все</option>';
-									echo '<option value="nov">Новые</option>';
-									echo '<option value="sprob">С пробегом</option>';
-									echo '</select>';
-								echo '</div>';
-
 
 		
 
@@ -1044,53 +1034,53 @@ if (!function_exists('classiera_adv_search_customfields')) {
 								echo '</div>';	
 
          echo '<p>Коробка передач</p>';
-         echo '<input type="checkbox" id="Transmission1" name="Transmission" value="mech">
+         echo '<input type="checkbox" id="Transmission1" name="Transmission1" value="Механика">
          <label for="Transmission1">механика</label></br>';
-         echo '<input type="checkbox" id="Transmission2" name="Transmission" value="auto">
+         echo '<input type="checkbox" id="Transmission2" name="Transmission2" value="Автомат">
          <label for="Transmission2">автомат</label></br>';
-         echo '<input type="checkbox" id="Transmission3" name="Transmission" value="var">
+         echo '<input type="checkbox" id="Transmission3" name="Transmission3" value="Вариатор">
          <label for="Transmission3">вариатор</label></br>';
-         echo '<input type="checkbox" id="Transmission4" name="Transmission" value="rob">
+         echo '<input type="checkbox" id="Transmission4" name="Transmission4" value="Робот">
          <label for="Transmission4">робот</label></br>';
 
          echo '<p>Тип кузова</p>';
-         echo '<input type="checkbox" id="body_type1" name="body_type" value="sedan">
+         echo '<input type="checkbox" id="body_type1" name="body_type1" value="Седан">
          <label for="body_type1">седан</label></br>';
-         echo '<input type="checkbox" id="body_type2" name="body_type" value="hatchback">
+         echo '<input type="checkbox" id="body_type2" name="body_type2" value="Хетчбэк">
          <label for="body_type2">хетчбек</label></br>';
-         echo '<input type="checkbox" id="body_type3" name="body_type" value="universal">
+         echo '<input type="checkbox" id="body_type3" name="body_type3" value="Универсал">
          <label for="body_type3">универсал</label></br>';
-         echo '<input type="checkbox" id="body_type4" name="body_type" value="vnedorojnik">
+         echo '<input type="checkbox" id="body_type4" name="body_type4" value="Внедорожник">
          <label for="body_type4">внедорожник</label></br>';
-         echo '<input type="checkbox" id="body_type5" name="body_type" value="kabriolet">
+         echo '<input type="checkbox" id="body_type5" name="body_type5" value="Кабриолет">
          <label for="body_type5">кабриолет</label></br>';
-         echo '<input type="checkbox" id="body_type6" name="body_type" value="kype">
+         echo '<input type="checkbox" id="body_type6" name="body_type6" value="Купе">
          <label for="body_type6">купе</label></br>';
-         echo '<input type="checkbox" id="body_type7" name="body_type" value="miniven">
+         echo '<input type="checkbox" id="body_type7" name="body_type7" value="Минивен">
          <label for="body_type7">минивен</label></br>';
-         echo '<input type="checkbox" id="body_type8" name="body_type" value="pikap">
+         echo '<input type="checkbox" id="body_type8" name="body_type8" value="Пикап">
          <label for="body_type8">пикап</label></br>';
-         echo '<input type="checkbox" id="body_type9" name="body_type" value="furgon">
+         echo '<input type="checkbox" id="body_type9" name="body_type9" value="Фургон">
          <label for="body_type9">фургон</label></br>';
-          echo '<input type="checkbox" id="body_type10" name="body_type" value="mikroaftobus">
+          echo '<input type="checkbox" id="body_type10" name="body_type10" value="Микроавтобус">
          <label for="body_type10">микроавтобус</label></br>';
 
 
          echo '<p>Тип двигателя</p>';
-         echo '<input type="checkbox" id="engine_type1" name="engine_type" value="benzin">
+         echo '<input type="checkbox" id="engine_type1" name="engine_type1" value="Бензин">
          <label for="engine_type1">бензин</label></br>';
-         echo '<input type="checkbox" id="engine_type2" name="engine_type" value="gaz">
+         echo '<input type="checkbox" id="engine_type2" name="engine_type2" value="Газ">
          <label for="engine_type2">газ</label></br>';
-         echo '<input type="checkbox" id="engine_type3" name="engine_type" value="electro">
+         echo '<input type="checkbox" id="engine_type3" name="engine_type3" value="Электро">
          <label for="engine_type3">электро</label></br>';
-         echo '<input type="checkbox" id="engine_type4" name="engine_type" value="dizel">
+         echo '<input type="checkbox" id="engine_type4" name="engine_type4" value="Дизель">
          <label for="engine_type4">дизель</label></br>';
-         echo '<input type="checkbox" id="engine_type5" name="engine_type" value="gibrid">
+         echo '<input type="checkbox" id="engine_type5" name="engine_type5" value="Гибрид">
          <label for="engine_type5">гибрид</label></br>';
 
 								echo '<div class="inner-addon right-addon">';
 									 echo '<input class="as_input" value="" type="text" name="mileage_ot" placeholder="Пробег от" />';
-		                             echo'<input class="as_input" value="" type="text" name="mileage_do" placeholder="Проюег до" />';
+		                             echo'<input class="as_input" value="" type="text" name="mileage_do" placeholder="Пробег до" />';
 								echo '</div>';
 
 								echo '<div class="inner-addon right-addon">';
@@ -1108,14 +1098,7 @@ if (!function_exists('classiera_adv_search_customfields')) {
 									echo '</select>';
 								echo '</div>';
 
-								echo '<div class="inner-addon right-addon">';
-									echo '<i class="right-addon form-icon fas fa-sort"></i>';
-									echo '<select name="stat_auto" class="form-control form-control-sm">';
-									echo '<option value="">Состояние</option>';							
-									echo '<option value="bit">битые</option>';
-									echo '<option value="nebit">не битые</option>';
-									echo '</select>';
-								echo '</div>';
+								
 
 
 

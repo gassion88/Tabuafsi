@@ -1,0 +1,18 @@
+2020-05-14T13:39:51+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-includes\Requests\Transport\cURL.php на строке 463
+
+2020-05-14T17:42:38+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\advanced-custom-fields\includes\fields\class-acf-field-oembed.php на строке 3
+
+2020-05-14T17:47:38+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\google-captcha\bws_menu\class-bws-settings.php на строке 8
+
+2020-05-14T18:37:38+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-includes\pomo\streams.php на строке 148
+
+2020-05-14T18:42:38+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-admin\includes\media.php на строке 16
+
+2020-05-14T18:52:38+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\google-captcha\bws_menu\class-bws-settings.php на строке 8
+
+2020-05-14T18:57:38+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-admin\includes\import.php на строке 17
+
+2020-05-14T19:02:38+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-admin\includes\options.php на строке 15
+
+2020-05-14T19:12:39+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\google-captcha\bws_menu\class-bws-settings.php на строке 8
+

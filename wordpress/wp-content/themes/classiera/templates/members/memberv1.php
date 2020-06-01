@@ -14,6 +14,7 @@
 	$partner6URL = $redux_demo['partner6-url'];	
 ?>
 <section class="partners section-pad">
+	<p class="partners_section_title">Наши партнёры</p>
 	<div class="container" style="overflow: hidden;">
 		<div class="row">
 			<div class="col-lg-12">
@@ -65,6 +66,7 @@
 							<img src="<?php echo esc_url($partner6); ?>" alt="<?php esc_html_e('partner', 'classiera') ?>">
 						</a>
                     </div>
+                    wqe
 				<?php } ?>
 				</div><!--owl-carousel-->
 			</div><!--col-lg-12-->

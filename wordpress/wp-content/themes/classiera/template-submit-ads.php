@@ -16,6 +16,9 @@ if ( !is_user_logged_in() ) {
 	}
 	wp_redirect( $login ); exit;
 }
+
+
+
 $errorMsg = '';
 $availableADS = '';
 $catError = '';
@@ -267,7 +270,23 @@ if(isset($_POST['postTitle'])){
 				if(isset($_POST['post_web_url_txt'])){
 					update_post_meta($post_id, 'post_web_url_txt', $_POST['post_web_url_txt'], $allowed);
 				}
-				update_post_meta($post_id, 'custom_field', $custom_fields);
+
+				if($_POST['classiera-sub-cat-field'] = '39'){
+                    update_post_meta($post_id, 'Модель', $_POST['39custom_field'][1][1]); 
+                    update_post_meta($post_id, 'Год выпуска', $_POST['39custom_field'][10][1]);
+                    update_post_meta($post_id, 'Пробег', $_POST['39custom_field'][5][1]);
+                    update_post_meta($post_id, 'Объём двигателя', $_POST['39custom_field'][9][1]);
+                    update_post_meta($post_id, 'Марка', $_POST['39custom_field'][0][1]);
+                    update_post_meta($post_id, 'Коробка передач', $_POST['39custom_field'][4][1]);
+                    update_post_meta($post_id, 'Тип кузова', $_POST['39custom_field'][7][1]);
+                    update_post_meta($post_id, 'Тип двигателя', $_POST['39custom_field'][8][1]);
+                    update_post_meta($post_id, 'Руль', $_POST['39custom_field'][11][1]);
+                    update_post_meta($post_id, 'Мощность, л.с.', $_POST['39custom_field'][10][1]);
+
+
+				}
+
+				
 				
 				if($classieraPostType == 'payperpost'){
 					$permalink = classiera_cart_url();

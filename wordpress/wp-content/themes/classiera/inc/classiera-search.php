@@ -105,7 +105,7 @@ if(! function_exists('classiera_CF_search_Query')){
 		*/
 		$cf_rgs  = array();
 
-		if ($custom_fields['Марка'] != '') {
+		        if ($custom_fields['Марка'] != '') {
 
 			$cf_rgs[] = array(
 					'key' => 'Марка',
@@ -113,6 +113,181 @@ if(! function_exists('classiera_CF_search_Query')){
 					'compare' => 'LIKE',
 				);
 		}
+				if ($custom_fields['Модель'] != '') {
+
+			$cf_rgs[] = array(
+					'key' => 'Модель',
+					'value' => $custom_fields['Модель'],
+					'compare' => 'LIKE',
+				);
+		}
+                if ($custom_fields['engine_capacity_ot'] != '' or $custom_fields['engine_capacity_do'] != '') {
+                       
+                    if($custom_fields['engine_capacity_ot'] == '') $eco = 0;
+                    else $eco = $custom_fields['engine_capacity_ot'];
+
+                    if($custom_fields['engine_capacity_do'] == '') $ecd = 15.0;
+                    else $ecd = $custom_fields['engine_capacity_do'];
+
+			$cf_rgs[] = array(
+					'key' => 'Объём двигателя',
+					'value' =>  array($eco, $ecd),
+					'type'=> 'numeric',
+			        'compare' => 'BETWEEN'
+				);
+
+		}	
+
+				if ($custom_fields['year_of_caк_ot'] != '' or $custom_fields['year_of_caк_do'] != '') {
+                       
+                    if($custom_fields['year_of_caк_ot'] == '') $yco = 0;
+                    else $eco = $custom_fields['year_of_caк_ot'];
+
+                    if($custom_fields['year_of_caк_do'] == '') $ycd = 3000;
+                    else $ecd = $custom_fields['year_of_caк_do'];
+
+			$cf_rgs[] = array(
+					'key' => 'Год выпуска',
+					'value' =>  array($yco, $ycd),
+					'type'=> 'numeric',
+			        'compare' => 'BETWEEN'
+				);
+
+		}
+				if ($custom_fields['Transmission1'] != '' or $custom_fields['Transmission2'] != '' or $custom_fields['Transmission3'] != '' or $custom_fields['Transmission4'] != '') {
+                       
+                     $arrayName = array();
+
+                    if ($custom_fields['Transmission1'] != '') 
+                    	$arrayName[] = $custom_fields['Transmission1'];
+
+                     if ($custom_fields['Transmission2'] != '')
+                    	$arrayName[] = $custom_fields['Transmission2'];
+                    
+                     if ($custom_fields['Transmission3'] != '')
+                    	$arrayName[] = $custom_fields['Transmission3'];
+                    
+                     if ($custom_fields['Transmission4'] != '')
+                    	$arrayName[] = $custom_fields['Transmission4'];
+                    
+
+			$cf_rgs[] = array(
+					'key' => 'Коробка передач',
+					'value' =>  $arrayName,
+					'compare' => 'IN'
+				);
+
+		}
+		if ($custom_fields['body_type1'] != ''
+		 or $custom_fields['body_type2'] != ''
+		 or $custom_fields['body_type3'] != ''
+		 or $custom_fields['body_type4'] != ''
+		 or $custom_fields['body_type5'] != ''
+	     or $custom_fields['body_type6'] != ''
+         or $custom_fields['body_type7'] != ''
+		 or $custom_fields['body_type8'] != ''
+		 or $custom_fields['body_type9'] != ''
+		 or $custom_fields['body_type10'] != '') {
+                       
+                     $arrayName1 = array();
+
+                    if ($custom_fields['body_type1'] != '') 
+                    	$arrayName1[] = $custom_fields['body_type1'];
+
+                     if ($custom_fields['body_type2'] != '')
+                    	$arrayName1[] = $custom_fields['body_type2'];
+                    
+                     if ($custom_fields['body_type3'] != '')
+                    	$arrayName1[] = $custom_fields['body_type3'];
+                    
+                     if ($custom_fields['body_type4'] != '')
+                    	$arrayName1[] = $custom_fields['body_type4'];
+
+                    if ($custom_fields['body_type5'] != '')
+                    	$arrayName1[] = $custom_fields['body_type5'];
+
+                    if ($custom_fields['body_type6'] != '')
+                    	$arrayName1[] = $custom_fields['body_type6'];
+
+                    if ($custom_fields['body_type7'] != '')
+                    	$arrayName1[] = $custom_fields['body_type7'];
+
+                    if ($custom_fields['body_type8'] != '')
+                    	$arrayName1[] = $custom_fields['body_type8'];
+
+                    if ($custom_fields['body_type9'] != '')
+                    	$arrayName1[] = $custom_fields['body_type9'];
+
+                    if ($custom_fields['body_type10'] != '')
+                    	$arrayName1[] = $custom_fields['body_type10'];
+                    
+
+			$cf_rgs[] = array(
+					'key' => 'Тип кузова',
+					'value' =>  $arrayName1,
+					'compare' => 'IN'
+				);
+
+		}
+		if ($custom_fields['engine_type1'] != ''
+		 or $custom_fields['engine_type2'] != ''
+		 or $custom_fields['engine_type3'] != ''
+		 or $custom_fields['engine_type4'] != ''
+		 or $custom_fields['engine_type5'] != '') {
+                       
+                     $arrayName2 = array();
+
+                    if ($custom_fields['engine_type1'] != '') 
+                    	$arrayName2[] = $custom_fields['engine_type1'];
+
+                     if ($custom_fields['engine_type2'] != '')
+                    	$arrayName2[] = $custom_fields['engine_type2'];
+                    
+                     if ($custom_fields['engine_type3'] != '')
+                    	$arrayName2[] = $custom_fields['engine_type3'];
+                    
+                     if ($custom_fields['engine_type4'] != '')
+                    	$arrayName2[] = $custom_fields['engine_type4'];
+
+                    if ($custom_fields['engine_type5'] != '')
+                    	$arrayName2[] = $custom_fields['engine_type5'];
+                    
+
+			$cf_rgs[] = array(
+					'key' => 'Тип двигателя',
+					'value' =>  $arrayName2,
+					'compare' => 'IN'
+				);
+
+		}
+		if ($custom_fields['mileage_ot'] != '' or $custom_fields['mileage_do'] != '') {
+                       
+                    if($custom_fields['mileage_ot'] == '') $eco = 0;
+                    else $mot = $custom_fields['mileage_ot'];
+
+                    if($custom_fields['mileage_do'] == '') $ecd = 15.0;
+                    else $mdo = $custom_fields['mileage_do'];
+
+			$cf_rgs[] = array(
+					'key' => 'Тип двигателя',
+					'value' =>  array($mot, $mdo),
+					'type'=> 'numeric',
+			        'compare' => 'BETWEEN'
+				);
+
+		}
+		 if ($custom_fields['steering'] != '') {
+
+			$cf_rgs[] = array(
+					'key' => 'Руль',
+					'value' => $custom_fields['steering'],
+					'compare' => 'LIKE',
+				);
+		}
+
+
+
+			
 		return $cf_rgs;
 
 	}

@@ -67,6 +67,7 @@ if(isset($redux_demo)){
 	$classieraMAPScroll = $redux_demo['classiera_map_scroll'];
 	$termsandcondition = $redux_demo['termsandcondition'];
 }
+
 /*==========================
 If the form is submitted
 ===========================*/
@@ -273,7 +274,8 @@ if(isset($_POST['unfollow'])){
 					$post_latitude = get_post_meta($post->ID, 'post_latitude', true);
 					$post_longitude = get_post_meta($post->ID, 'post_longitude', true);
 					$post_address = get_post_meta($post->ID, 'post_address', true);
-					$classieraCustomFields = get_post_meta($post->ID, 'custom_field', true);					
+				
+
 					$post_currency_tag = get_post_meta($post->ID, 'post_currency_tag', true);
 					$classiera_ads_type = get_post_meta($post->ID, 'classiera_ads_type', true);
 					$classiera_allow_bids = get_post_meta($post->ID, 'classiera_allow_bids', true);
@@ -282,6 +284,8 @@ if(isset($_POST['unfollow'])){
 					$post_map_location = get_post_meta($post->ID, $locShownBy, true);
 					$postCatgory = get_the_category( $post->ID );
 					$postCurCat = $postCatgory[0]->name;
+                     
+ 
 					if( has_post_thumbnail()){
 						$classieraIMG = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full');
 						$classieraIMGURL = $classieraIMG[0];
@@ -386,6 +390,97 @@ if(isset($_POST['unfollow'])){
 									</p>
                                 </li><!--Views-->
 								<?php 
+			
+						if ($postCurCat == 'Автомобили') {
+                    	$classieraCustomFields = array();
+            
+                    	                     ?>
+											<li>
+												<p class="clearfix">Пробег 
+												<span class="pull-right flip">
+													<?php echo get_post_meta( $post->ID, 'Пробег', true ); ?>
+												</span>
+												</p>
+											</li>
+                    	                     <li>
+												<p class="clearfix">Марка 
+												<span class="pull-right flip">
+													<?php echo get_post_meta( $post->ID, 'Марка', true ); ?>
+												</span>
+												</p>
+											</li>
+
+											<li>
+												<p class="clearfix">Год выпуска 
+												<span class="pull-right flip">
+													<?php echo get_post_meta( $post->ID, 'Год выпуска', true ); ?>
+												</span>
+												</p>
+											</li>
+
+																						<li>
+												<p class="clearfix">Модель 
+												<span class="pull-right flip">
+													<?php echo get_post_meta( $post->ID, 'Модель', true ); ?>
+												</span>
+												</p>
+											</li>
+											<li>
+												<p class="clearfix">Объём двигателя, л 
+												<span class="pull-right flip">
+													<?php echo get_post_meta( $post->ID, 'Объём двигателя', true ); ?>
+												</span>
+												</p>
+											</li>
+											<li>
+												<p class="clearfix">Мощность, л.с. 
+												<span class="pull-right flip">
+													<?php echo get_post_meta( $post->ID, 'Мощность, л.с.', true ); ?>
+												</span>
+												</p>
+											</li>
+											<li>
+												<p class="clearfix">Руль 
+												<span class="pull-right flip">
+													<?php echo get_post_meta( $post->ID, 'Руль', true ); ?>
+												</span>
+												</p>
+											</li>
+											<li>
+												<p class="clearfix">Коробка передач 
+												<span class="pull-right flip">
+													<?php echo get_post_meta( $post->ID, 'Коробка передач', true ); ?>
+												</span>
+												</p>
+											</li>
+											<li>
+												<p class="clearfix">Тип кузова 
+												<span class="pull-right flip">
+													<?php echo get_post_meta( $post->ID, 'Тип кузова', true ); ?>
+												</span>
+												</p>
+											</li>
+											<li>
+												<p class="clearfix">Тип двигателя 
+												<span class="pull-right flip">
+													<?php echo get_post_meta( $post->ID, 'Тип двигателя', true ); ?>
+												</span>
+												</p>
+											</li>
+											<li>
+												<p class="clearfix">Состояние 
+												<span class="pull-right flip">
+													<?php echo get_post_meta( $post->ID, 'Состояние', true ); ?>
+												</span>
+												</p>
+											</li>
+											<!--test--><?	
+                    
+                    	     }
+                    else
+                    {
+						$classieraCustomFields = get_post_meta($post->ID, 'custom_field', true);
+
 								if(!empty($classieraCustomFields)) {									
 									for ($i = 0; $i < count($classieraCustomFields); $i++){
 										if( !isset($classieraCustomFields[$i][2]) || $classieraCustomFields[$i][2] == 'text'){
@@ -433,6 +528,7 @@ if(isset($_POST['unfollow'])){
 										}
 									}
 								}
+							}
 								?>
 								<?php if(!empty($post_web_url)){ ?>
 								<li>

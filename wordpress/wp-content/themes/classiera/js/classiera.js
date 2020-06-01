@@ -56,6 +56,47 @@ jQuery.fn.textlimit = function(limit)
 };
 //classiEra JS
 jQuery(document).ready(function(jQuery){
+    jQuery(window).scroll(function(){
+
+        
+       if ( jQuery(document).scrollTop() > jQuery('.classiera-navbar').height() + 10 && jQuery(document).scrollTop() < jQuery('.classiera-navbar').height() + 50  + jQuery('.user-content-height').height() - jQuery('.flag').height() - 70){
+              jQuery('.flag').addClass('dinamic1');
+               jQuery('.flag').css('margin-top', "");
+        //скрол меню
+       }else if(jQuery(document).scrollTop() < jQuery('.classiera-navbar').height() + 10 ){
+        jQuery('.flag').removeClass('dinamic1');
+       // фиксирование в шапке
+       }
+       else{
+        //фиксирование в конце
+          jQuery('.flag').removeClass('dinamic1');
+          jQuery('.flag').css('margin-top', jQuery('.classiera-navbar').height() + 50  + jQuery('.user-content-height').height() - jQuery('.flag').height() - 200);
+       }
+
+
+           /*if ( (jQuery('.section-bg-white').offset().top + 486) >= jQuery('#dinamic_menu123').offset().top ) {
+            var postion_menu = (jQuery('#dinamic_menu123').offset().top - 486);
+            //console.log(postion_menu);
+           jQuery('.flag').removeClass('dinamic1');
+           jQuery('.flag').toggleClass('dinamic2');
+           jQuery('.dinamic2').css("margin-top", postion_menu+"px");
+          // jQuery('#dinamic1').css("margin-top", jQuery('#dinamic1').offset().top + 486);
+   }
+   if ( (jQuery('.section-bg-white').offset().top + 486) <= jQuery('#dinamic_menu123').offset().top ){
+         jQuery('.flag').removeClass('dinamic2');
+         jQuery('.flag').toggleClass('dinamic1');
+
+
+   }*/
+});
+     // alert(jQuery('#dinamic_menu123').position().top);
+    
+    //Динамическое меню в профиле
+
+
+    
+
+
     "use strict";
     jQuery.noConflict();
 	jQuery('[data-toggle="tooltip"]').tooltip();

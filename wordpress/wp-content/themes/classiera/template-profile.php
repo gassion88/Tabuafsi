@@ -471,8 +471,9 @@ if(isset($_GET['restore_id'])){
 						</div><!--media border-bottom-->
 						<?php endwhile;	?>
 						<?php wp_reset_query(); ?>
+						<p class="qweqwe"></p>
 						<div class="user-view-all text-center">
-                            <a href="<?php echo esc_url($all_adds); ?>" class="btn btn-primary btn-md btn-style-one sharp">
+                            <a href="<?php echo esc_url($all_adds); ?>" id="dinamic_menu123" class="btn btn-primary btn-md btn-style-one sharp">
 								<?php esc_html_e("View All", 'classiera') ?>
 							</a>
                         </div>

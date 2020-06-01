@@ -1,0 +1,12 @@
+2020-05-28T08:03:20+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-includes\Requests\Transport\cURL.php на строке 441
+
+2020-05-28T10:00:49+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-admin\includes\class-wp-filesystem-direct.php на строке 79
+
+2020-05-28T15:07:12+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\advanced-custom-fields\includes\locations\class-acf-location-post.php на строке 3
+
+2020-05-28T15:12:12+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-api-keys.php на строке 9
+
+2020-05-28T15:27:13+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\google-captcha\bws_menu\deprecated.php на строке 11
+
+2020-05-28T15:32:12+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\woocommerce\includes\tracks\class-wc-tracks-event.php на строке 10
+

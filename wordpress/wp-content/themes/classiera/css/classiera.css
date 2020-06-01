@@ -4053,7 +4053,7 @@ background-image: -webkit-gradient(linear, left top, left bottom, from(#9c27b0),
     white-space: nowrap; }
     .partners .partner-img img {
       vertical-align: middle;
-      max-width: 120px !important;
+      /*max-width: 120px !important;*/
       display: inline !important; }
 
 .partners-v2 {
@@ -5498,6 +5498,11 @@ footer ul.category > li > a > i{
 /* ==========================================================================
    user pages
    ========================================================================== */
+   .dinamic1{
+    position: fixed;
+    width: 270px;
+    top: 140px;   
+   }
 .user-pages {
   padding: 50px 0; }
   @media only screen and (min-width: 1024px) {
@@ -8560,4 +8565,12 @@ Latest Gallery
 }
 .classiera_img_info{
   margin-bottom:10px !important;
+}
+.partners_section_title{
+
+    text-align: center;
+    font-size: 20px;
+}
+a {
+  color: #fff;
 }

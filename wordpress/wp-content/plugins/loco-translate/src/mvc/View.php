@@ -1,4 +1,5 @@
-<?php
+<?php /** @noinspection PhpMultipleClassesDeclarationsInOneFile */
+
 /**
  * View renderer
  */
@@ -36,6 +37,7 @@ class Loco_mvc_View implements IteratorAggregate {
 
     /**
      * @internal
+     * @param array
      */
     public function __construct( array $args = array() ){
         $this->scope = new Loco_mvc_ViewParams( $args );
@@ -49,7 +51,7 @@ class Loco_mvc_View implements IteratorAggregate {
      * @return Loco_mvc_View 
      */
     public function cd( $path ){
-        if( $path && '/' === $path{0} ){
+        if( $path && '/' === substr($path,0,1) ){
             $this->cwd = untrailingslashit( loco_plugin_root().'/tpl'.$path );
         }
         else {
@@ -59,10 +61,9 @@ class Loco_mvc_View implements IteratorAggregate {
     }    
     
 
-
     /**
      * @internal
-     * Clean up if something ubruptly stopped rendering before graceful end
+     * Clean up if something abruptly stopped rendering before graceful end
      */
     public function __destruct(){
         if( $this->block ){
@@ -71,9 +72,9 @@ class Loco_mvc_View implements IteratorAggregate {
     }
 
 
-
     /**
      * Render error screen HTML
+     * @param Loco_error_Exception
      * @return string
      */
     public static function renderError( Loco_error_Exception $e ){
@@ -88,11 +89,10 @@ class Loco_mvc_View implements IteratorAggregate {
     }
 
 
-
     /**
-     * @internal
      * Make this view a child of another template. i.e. decorate this with that.
      * Parent will have access to original argument scope, but separate from now on
+     * @param string
      * @return Loco_mvc_View the parent view
      */
     private function extend( $tpl ){
@@ -104,8 +104,8 @@ class Loco_mvc_View implements IteratorAggregate {
 
 
     /**
-     * @internal
      * After start is called any captured output will be placed in the named variable
+     * @param string
      * @return void
      */
     private function start( $name ){
@@ -115,9 +115,7 @@ class Loco_mvc_View implements IteratorAggregate {
     }
 
 
-
     /**
-     * @internal
      * When stop is called, buffered output is saved into current variable for output by parent template, or at end of script.
      * @return void
      */
@@ -269,6 +267,7 @@ class Loco_mvc_View implements IteratorAggregate {
 
     /**
      * Shorthand for `echo esc_html( sprintf( ...`
+     * @param string
      * @return string
      */
     private static function e( $text ){

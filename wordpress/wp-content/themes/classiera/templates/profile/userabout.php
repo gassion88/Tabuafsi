@@ -40,7 +40,7 @@
 	$classieraUserFavourite = classiera_get_template_url('template-favorite.php');
 	$classiera_bid_system = $redux_demo['classiera_bid_system'];
 ?>
-<aside class="section-bg-white">
+<aside  class="section-bg-white flag">
 	<div class="author-info border-bottom">
 		<div class="media">
 			<div class="media-left">

@@ -1,0 +1,36 @@
+2020-05-07T14:10:07+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-includes\Requests\Transport\cURL.php на строке 463
+
+2020-05-07T16:17:34+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-includes\Requests\Transport\cURL.php на строке 162
+
+2020-05-07T16:17:35+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\accesspress-social-login-lite\accesspress-social-login-lite.php на строке 268
+
+2020-05-07T16:17:35+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\accesspress-social-login-lite\accesspress-social-login-lite.php на строке 268
+
+2020-05-07T16:17:35+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\accesspress-social-login-lite\accesspress-social-login-lite.php на строке 268
+
+2020-05-07T16:17:35+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\accesspress-social-login-lite\accesspress-social-login-lite.php на строке 268
+
+2020-05-07T16:17:35+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\accesspress-social-login-lite\accesspress-social-login-lite.php на строке 268
+
+2020-05-07T16:22:22+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-includes\class-wp-image-editor-imagick.php на строке 343
+
+2020-05-07T16:22:22+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-pointers.php на строке 11
+
+2020-05-07T16:37:20+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-includes\Requests\Transport\cURL.php на строке 162
+
+2020-05-07T16:37:20+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\accesspress-social-login-lite\accesspress-social-login-lite.php на строке 268
+
+2020-05-07T16:37:20+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\accesspress-social-login-lite\accesspress-social-login-lite.php на строке 268
+
+2020-05-07T16:43:12+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-includes\Requests\Transport\cURL.php на строке 162
+
+2020-05-07T16:43:12+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\accesspress-social-login-lite\accesspress-social-login-lite.php на строке 268
+
+2020-05-07T16:43:12+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\accesspress-social-login-lite\accesspress-social-login-lite.php на строке 268
+
+2020-05-07T16:43:12+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\accesspress-social-login-lite\accesspress-social-login-lite.php на строке 268
+
+2020-05-07T16:43:12+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-content\plugins\accesspress-social-login-lite\accesspress-social-login-lite.php на строке 268
+
+2020-05-07T17:12:57+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в W:\domains\wordpress\wp-admin\includes\class-wp-filesystem-direct.php на строке 79
+

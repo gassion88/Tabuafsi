@@ -93,6 +93,7 @@ class Loco_package_Plugin extends Loco_package_Bundle {
 
     /**
      * Get raw plugin data from WordPress registry, plus additional "basedir" field for resolving handle to actual file.
+     * @param string relative file path used as handle e.g. loco-translate/loco.php
      * @return array
      */
     public static function get_plugin( $handle ){
@@ -179,10 +180,14 @@ class Loco_package_Plugin extends Loco_package_Bundle {
     public function setDirectoryPath( $path ){
         parent::setDirectoryPath($path);
         // plugin bootstrap file can be inferred from base directory + handle
+        // e.g. if base is "/path/to/foo" and handle is "foo/bar.php" we can derive "/path/to/foo/bar.php"
         if( ! $this->getBootstrapPath() ){
-            $file = new Loco_fs_File( basename( $this->getHandle() ) );
-            $file->normalize( $path );
-            $this->setBootstrapPath( $file->getPath() );
+            $handle = $this->getHandle();
+            if( '' !== $handle ) {
+                $file = new Loco_fs_File( basename($handle) );
+                $file->normalize( $path );
+                $this->setBootstrapPath( $file->getPath() );
+            }
         }
 
         return $this;
